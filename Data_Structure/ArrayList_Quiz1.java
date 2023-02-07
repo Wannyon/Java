@@ -17,6 +17,7 @@ public class ArrayList_Quiz1 {
             printMenu();
             System.out.print("\n메뉴 선택 => ");
             menu = sc.next();
+            
             if (menu.equals("1")) {
                 inputData(members);
                 continue;
