@@ -1,4 +1,4 @@
-package Data_Structure;
+package JDBC_Quiz;
 
 import java.util.Scanner;
 

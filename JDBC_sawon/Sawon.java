@@ -1,6 +1,8 @@
-package Data_Structure;
+package JDBC_sawon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Sawon {
 	String sabun;
@@ -13,18 +15,19 @@ public class Sawon {
 
 	}
 
-	public void inputData() {
-		Scanner scan = new Scanner(System.in);
-		System.out.print("사원번호 입력 =>");
-		sabun = scan.next();
-		System.out.print("부서명 입력 =>");
-		deptname = scan.next();
-		System.out.print("이름 입력 =>");
-		irum = scan.next();
-		System.out.print("성별 입력 =>");
-		gender = scan.next();
-		System.out.print("이메일 입력 =>");
-		email = scan.next();
+	public void inputData() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("usertbl 테이블에 값 추가하기 .....");
+		System.out.print("사원번호 입력 : ");
+		sabun = br.readLine();
+		System.out.print("이름 입력 : ");
+		irum = br.readLine();
+		System.out.print("부서 입력 : ");
+		deptname = br.readLine();
+		System.out.print("성별 입력 : ");
+		gender = br.readLine();
+		System.out.print("이메일 입력 : ");
+		email = br.readLine();
 	}
 
 	public void outputData() {

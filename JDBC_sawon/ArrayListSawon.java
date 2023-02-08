@@ -1,19 +1,23 @@
-package Data_Structure;
+package JDBC_sawon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayListSawon {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		ArrayList<Sawon> list = new ArrayList<Sawon>();
 		int menu;
 		
 		Scanner scan = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		while(true) {
 			printMenu();
 			System.out.print("메뉴 선택 => ");
-			menu = scan.nextInt();
+			menu = br.read();
 			System.out.println();
 			
 			if (menu == 6) {
@@ -56,7 +60,7 @@ public class ArrayListSawon {
 		System.out.println();
 	}
 	
-	static void input_sawon(ArrayList<Sawon> list)
+	static void input_sawon(ArrayList<Sawon> list) throws IOException
 	{
 		Sawon obj = new Sawon();
 		obj.inputData();
