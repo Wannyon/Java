@@ -1,0 +1,18 @@
+package LocalInnerClass.Message;
+
+class EMailSender extends MessageSender {	// 이메일 송신 클래스
+	String sender;
+	String receiver;
+
+	EMailSender(String sender, String receiver) {
+		this.sender = sender;
+		this.receiver = receiver;
+	}
+
+	void send(String message) {
+		System.out.println("보내는 사람:" + sender);
+		System.out.println("받는 사람:" + receiver);
+		System.out.println("내용:" + message);
+		System.out.println();
+	}
+}
